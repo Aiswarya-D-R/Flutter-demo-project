@@ -4,7 +4,8 @@ class Newview extends StatelessWidget {
   var data = [
     {"name": "Aish", "age": 30, "gender": "Female"},
     {"name": "Ashwin", "age": 16, "gender": "Male"},
-    {"name": "Achu", "age": 20, "gender": "Male"}
+    {"name": "Achu", "age": 20, "gender": "Male"},
+    {"name":"Deepthi","age":25,"gender":"Female"}
   ];
 
   @override
@@ -20,7 +21,7 @@ class Newview extends StatelessWidget {
                 elevation: 15.0,
                 child: ListTile(
                   leading: Icon(
-                    Icons.perm_identity,
+                    Icons.perm_contact_calendar,
                     size: 25.0,
                   ),
                   title: Text(
