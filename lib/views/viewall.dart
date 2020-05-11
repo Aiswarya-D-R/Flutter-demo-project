@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class Newview extends StatelessWidget {
   var data = [
-    {"name": "Aish", "age": 30, "gender": "Female"},
-    {"name": "Ashwin", "age": 16, "gender": "Male"},
-    {"name": "Achu", "age": 20, "gender": "Male"},
-    {"name":"Deepthi","age":25,"gender":"Female"}
+    {"name": "Aish", "age": 30, "gender": "Female","img":"images/image2.jpg"},
+    {"name": "Ashwin", "age": 16, "gender": "Male","img":"images/image1.jpg"},
+    {"name": "Achu", "age": 20, "gender": "Male","img":"images/image3.jpg"},
+    {"name":"Deepthi","age":25,"gender":"Female","img":"images/image4.jpg"}
   ];
 
   @override
@@ -20,9 +20,15 @@ class Newview extends StatelessWidget {
               return Card(
                 elevation: 15.0,
                 child: ListTile(
-                  leading: Icon(
-                    Icons.perm_contact_calendar,
-                    size: 25.0,
+                  leading:
+                  
+                  ClipOval(
+
+                    child: Image(
+                      height: 45.0,
+                      width: 45.0,
+                      image: AssetImage(data[index]["img"]),
+                    ),
                   ),
                   title: Text(
                     "Name: " + data[index]["name"],
