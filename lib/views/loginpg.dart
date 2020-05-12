@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tryout/views/counterpg.dart';
 import 'package:tryout/views/viewall.dart';
 
 class Loginpage extends StatefulWidget {
@@ -9,11 +10,13 @@ class Loginpage extends StatefulWidget {
 
 class _LoginpageState extends State<Loginpage> {
   bool _obscureText = true;
+
   void _toggle() {
     setState(() {
       _obscureText = !_obscureText;
     });
   }
+
   TextEditingController usertxtcontroller = TextEditingController();
   TextEditingController passcontroller = TextEditingController();
 
@@ -43,20 +46,20 @@ class _LoginpageState extends State<Loginpage> {
               TextField(
                 controller: passcontroller,
                 decoration: InputDecoration(
-                    hintText: ("PASSWORD"),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    prefixIcon: Icon(Icons.lock),
-                    suffix: IconButton(
-                      icon: Icon(CupertinoIcons.eye),
-                      onPressed: () {
-                        print("unlock");
-                        setState(() {
-                          _toggle();
-                        });
-                      },
-                    ),
+                  hintText: ("PASSWORD"),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                  prefixIcon: Icon(Icons.lock),
+                  suffix: IconButton(
+                    icon: Icon(CupertinoIcons.eye),
+                    onPressed: () {
+                      print("unlock");
+                      setState(() {
+                        _toggle();
+                      });
+                    },
+                  ),
                 ),
                 obscureText: _obscureText,
               ),
@@ -69,8 +72,10 @@ class _LoginpageState extends State<Loginpage> {
                   var getPass = passcontroller.text;
                   if (getName == "admin" && getPass == "12345") {
                     print("Login Sucessful");
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Newview()));
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => CounterPg()),
+                    );
                   } else {
                     print("Invalid credentials");
                   }
