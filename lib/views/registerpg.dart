@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tryout/views/loginpg.dart';
+import 'package:tryout/views/navigation.dart';
 
 class Register extends StatelessWidget {
   TextEditingController namecontroller = TextEditingController();

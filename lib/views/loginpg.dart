@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tryout/views/counterpg.dart';
+import 'package:tryout/views/navigation.dart';
 import 'package:tryout/views/todopg.dart';
 import 'package:tryout/views/viewall.dart';
 
@@ -75,7 +76,7 @@ class _LoginpageState extends State<Loginpage> {
                     print("Login Sucessful");
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ToDoApp()),
+                      MaterialPageRoute(builder: (context) => MyApp()),
                     );
                   } else {
                     print("Invalid credentials");
