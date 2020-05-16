@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tryout/views/counterpg.dart';
 import 'package:tryout/views/navigation.dart';
-import 'package:tryout/views/todopg.dart';
-import 'package:tryout/views/viewall.dart';
+
 
 class Loginpage extends StatefulWidget {
   @override
@@ -79,6 +77,9 @@ class _LoginpageState extends State<Loginpage> {
                       MaterialPageRoute(builder: (context) => MyApp()),
                     );
                   } else {
+
+                    final msg=SnackBar(content: Text("Invalid credentials"));
+                    Scaffold.of(context).showSnackBar(msg);
                     print("Invalid credentials");
                   }
                 },

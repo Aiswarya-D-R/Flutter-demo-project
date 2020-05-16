@@ -10,8 +10,9 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int _currentIndex=0;
-  var pages=[Pg1(),Pg2(),Pg3(),Pg4()];
+  int _currentIndex = 0;
+  var pages = [Pg1(), Pg2(), Pg3(), Pg4()];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,12 +22,11 @@ class _MyAppState extends State<MyApp> {
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.shifting,
           currentIndex: _currentIndex,
-          onTap: (index){
+          onTap: (index) {
             setState(() {
-              _currentIndex=index;
+              _currentIndex = index;
             });
           },
-
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
@@ -49,7 +49,6 @@ class _MyAppState extends State<MyApp> {
               backgroundColor: Colors.blue,
             ),
           ],
-
         ),
       ),
     );
